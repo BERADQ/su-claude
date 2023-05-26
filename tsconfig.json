@@ -3,17 +3,15 @@
     "rootDir": "src",
     "outDir": "lib",
     "target": "es2020",
-    "module": "commonjs",
+    "module": "CommonJS",
     "declaration": true,
     "composite": true,
     "incremental": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "jsx": "react-jsx",
-    "jsxImportSource": "@satorijs/element",
+    "jsxImportSource": "@satorijs/element"
   },
-  "include": [
-    "src",
-  ],
+  "include": ["src"]
 }

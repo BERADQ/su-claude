@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-su-claude",
-  "description": "逆向自claude,将其接入koishi,只提供服务.",
-  "version": "0.0.1",
+  "description": "逆向自claude,将其接入koishi",
+  "version": "0.0.4",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -17,5 +17,8 @@
   ],
   "peerDependencies": {
     "koishi": "^4.13.0"
+  },
+  "dependencies": {
+    "claude-api": "*"
   }
 }
