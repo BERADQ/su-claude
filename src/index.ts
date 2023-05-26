@@ -94,12 +94,13 @@ export async function apply(ctx: Context, config: Config) {
         channel: icn,
         timeoutMs: 600 * 1000,
         retry: 2,
-        conversationId: convID || null,
+        conversationId: convID,
       });
       convID = result.conversationId;
       return `<at id="${c.session.userId}"/> ${result.text}`;
     });
   ctx.command("cld.new", "开始新一轮的对话").action(async (c) => {
     convID = "";
+    return "开始新一轮的对话";
   });
 }
