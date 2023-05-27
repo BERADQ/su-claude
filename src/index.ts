@@ -1,5 +1,5 @@
 import { Context, Schema } from "koishi";
-
+import uuid from "uuid";
 export const name = "su-claude";
 export const usage = `
 ## 使用该插件有一定被封号的可能，请自行承担风险。如有意外，插件开发者概不负责！
@@ -81,7 +81,7 @@ export async function apply(ctx: Context, config: Config) {
     false
   );
   let icn = "";
-  let convID = "";
+  let convID = uuid.v4();
   ctx
     .command("cld <content:text>", "与claude聊天")
     .usage("这样用：cld 聊天内容")
@@ -100,7 +100,7 @@ export async function apply(ctx: Context, config: Config) {
       return `<at id="${c.session.userId}"/> ${result.text}`;
     });
   ctx.command("cld.new", "开始新一轮的对话").action(async (c) => {
-    convID = "";
+    convID = uuid.v4();
     return "开始新一轮的对话";
   });
 }

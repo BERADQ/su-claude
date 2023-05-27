@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-su-claude",
-  "description": "逆向自claude,将其接入koishi",
-  "version": "0.0.5",
+  "description": "使用slack-api调用claude,将其接入koishi",
+  "version": "0.0.7",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -19,6 +19,10 @@
     "koishi": "^4.13.0"
   },
   "dependencies": {
-    "claude-api": "*"
+    "claude-api": "*",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.1"
   }
 }
