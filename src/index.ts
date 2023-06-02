@@ -1,5 +1,5 @@
 import { Context, Schema } from "koishi";
-import uuid from "uuid";
+import * as uuid from "uuid";
 export const name = "su-claude";
 export const usage = `
 ## 使用该插件有一定被封号的可能，请自行承担风险。如有意外，插件开发者概不负责！
